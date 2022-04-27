@@ -1,0 +1,45 @@
+{
+    "name": "vue-quick-notes",
+    "version": "0.1.0",
+    "main": "./dist/index.umd.js",
+    "module": "./dist/index.es.js",
+    "unpkg": "./dist/index.umd.js",
+	"types": "./dist/index.d.ts",
+	"description": "Quickly add notes to admin panel/dashboard or websites.",
+	"keywords": ["vue-quick-notes","Vue","vue sticky notes"],
+	"author": {
+		"name":"Fazail Alam",
+		"email": "fazailalam898@gmail.com",
+		"url": "https://fazail-alam.web.app"
+	},
+    "files": [
+        "dist"
+    ],
+    "exports": {
+        ".": {
+            "import": "./dist/index.es.js",
+            "require": "./dist/index.umd.js"
+        },
+        "./dist/style.css": "./dist/style.css"
+    },
+    "scripts": {
+        "dev": "vite",
+        "build": "vue-tsc --noEmit && vite build",
+        "preview": "vite preview"
+    },
+    "dependencies": {
+        "@vueuse/core": "^8.3.1",
+        "vue": "^3.2.25"
+    },
+    "devDependencies": {
+        "@tailwindcss/forms": "^0.5.0",
+        "@types/node": "^17.0.27",
+        "@vitejs/plugin-vue": "^2.3.1",
+        "autoprefixer": "^10.4.5",
+        "postcss": "^8.4.12",
+        "tailwindcss": "^3.0.24",
+        "typescript": "^4.5.4",
+        "vite": "^2.9.5",
+        "vue-tsc": "^0.34.7"
+    }
+}
