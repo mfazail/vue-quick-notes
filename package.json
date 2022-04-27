@@ -1,20 +1,29 @@
 {
     "name": "vue-quick-notes",
-    "version": "0.1.0",
+    "version": "0.1.2",
     "main": "./dist/index.umd.js",
     "module": "./dist/index.es.js",
     "unpkg": "./dist/index.umd.js",
-	"types": "./dist/index.d.ts",
-	"description": "Quickly add notes to admin panel/dashboard or websites.",
-	"keywords": ["vue-quick-notes","Vue","vue sticky notes"],
-	"author": {
-		"name":"Fazail Alam",
-		"email": "fazailalam898@gmail.com",
-		"url": "https://fazail-alam.web.app"
-	},
+    "types": "./dist/index.d.ts",
+    "description": "Quickly add notes to admin panel/dashboard or websites.",
+    "keywords": [
+        "vue-quick-notes",
+        "Vue",
+        "vue sticky notes"
+    ],
+    "homepage": "https://mfazail.github.io/vue-quick-notes/",
+    "author": {
+        "name": "Fazail Alam",
+        "email": "fazailalam898@gmail.com",
+        "url": "https://fazail-alam.web.app"
+    },
     "files": [
         "dist"
     ],
+    "repository": {
+        "url": "https://github.com/mfazail/vue-quick-notes",
+        "type": "git"
+    },
     "exports": {
         ".": {
             "import": "./dist/index.es.js",
