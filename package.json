@@ -1,14 +1,16 @@
 {
     "name": "vue-quick-notes",
-    "version": "0.1.2",
+    "version": "0.1.3",
     "main": "./dist/index.umd.js",
     "module": "./dist/index.es.js",
     "unpkg": "./dist/index.umd.js",
     "types": "./dist/index.d.ts",
-    "description": "Quickly add notes to admin panel/dashboard or websites.",
+    "description": "Quickly take notes in your admin panel/dashboard or websites.",
     "keywords": [
         "vue-quick-notes",
+        "vue quick notes",
         "Vue",
+        "Vue component",
         "vue sticky notes"
     ],
     "homepage": "https://mfazail.github.io/vue-quick-notes/",
@@ -49,6 +51,7 @@
         "tailwindcss": "^3.0.24",
         "typescript": "^4.5.4",
         "vite": "^2.9.5",
+        "vite-plugin-dts": "^1.1.1",
         "vue-tsc": "^0.34.7"
     }
 }

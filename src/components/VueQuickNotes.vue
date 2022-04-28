@@ -38,7 +38,7 @@ let props = defineProps({
 	}
 });
 
-let text = useQuickNotes()
+let {text , open } = useQuickNotes()
 
 onMounted(() => {
     text.value = props.modelValue;
@@ -63,7 +63,7 @@ const { width, height } = useWindowSize();
 
 const { style } = useDraggable(dragger, {
     initialValue: { x: _position.value.x, y: _position.value.y },
-    stopPropagation: true,
+	preventDefault:true
 });
 
 const { ctrl_alt_k } = useMagicKeys();
@@ -82,8 +82,6 @@ const { isListening, start, stop, result, isSupported, error } =
         interimResults: false,
         continuous: false,
     });
-
-let open = ref<boolean>(true);
 
 let _style = computed<string>(() => {
     return `${style.value}  z-index:${props.zIndex};`;
@@ -126,12 +124,12 @@ watch(ctrl_alt_k, (v) => {
     >
         <div
             ref="dragger"
-            class="flex items-center justify-between cursor-pointer"
+            class="flex items-center justify-between cursor-grab"
         >
             <label :for="_id" class="font-medium">{{ label }}</label>
             <div class="flex space-x-2">
                 <svg
-                    @click="copy()"
+                    @click.stop="copy()"
                     xmlns="http://www.w3.org/2000/svg"
                     class="h-4 w-4 cursor-pointer"
                     fill="none"
